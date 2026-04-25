@@ -6,6 +6,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Toggleswitch from './Toggleswitch'
 import Showhide from './Showhide'
+import Darkmode from './darkmode'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,13 +16,11 @@ function App() {
     <Router>
 
     <div className="flex">
-
-      <Routes>
-        <Route path='/' element={<Showhide />}>
-        
-        </Route>
-      </Routes>
-
+<Routes>
+  <Route path='/' element={<Darkmode />} />       
+  <Route path='/hide' element={<Showhide />} />
+  <Route path='/dhide' element={<Darkmode />} />
+</Routes>
       <Toggleswitch />
 
 
